@@ -1,0 +1,16 @@
+# Линтеры
+flake8
+black
+isort
+
+# Типизация
+mypy
+
+# Тестирование
+pytest
+
+# Документация (если захочешь)
+sphinx
+
+# dev-tools
+ipython

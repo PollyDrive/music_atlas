@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: music_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "${POSTGRES_PORT}:5432"  
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - music_net
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    ports:
+      - "${METABASE_PORT}:3000"
+    depends_on:
+      - postgres
+    networks:
+      - music_net
+
+networks:
+  music_net:
+    driver: bridge

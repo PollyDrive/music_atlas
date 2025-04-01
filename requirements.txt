@@ -1,0 +1,13 @@
+# Основные библиотеки для ETL и аналитики
+pandas
+numpy
+sqlalchemy
+psycopg2-binary
+requests
+tqdm
+nltk
+spacy
+networkx
+jupyterlab
+matplotlib
+plotly

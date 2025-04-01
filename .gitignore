@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints
+
+# DBeaver
+.metadata/
+*.dbeaver/
+
+# Docker
+pgdata/
+**/pgdata/
+docker-compose.override.yml
+
+# Metabase
+metabase.db/
+metabase-data/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
