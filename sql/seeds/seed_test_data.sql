@@ -1,12 +1,6 @@
 -- seed_test_data.sql
 -- Минимальные тестовые данные для проверки связей
 
--- Страны
-INSERT INTO staging.country (name, economic_system, suicide_rate, major_religion, birth_rate, divorce_rate)
-VALUES 
-('USA', 'Capitalism', 14.5, 'Christianity', 12.3, 2.5),
-('Germany', 'Social Market Economy', 9.8, 'Christianity', 8.5, 1.7);
-
 -- Жанры
 INSERT INTO staging.genre (name, subgenre, origin_country, origin_year)
 VALUES

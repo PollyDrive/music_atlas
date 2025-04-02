@@ -6,8 +6,11 @@
 \echo '==> Creating staging schema and tables...'
 \i '/docker-entrypoint-initdb.d/schemas/create_staging.sql'
 
+\echo '==> Creating iso-countries schema and tables...'
+\i '/docker-entrypoint-initdb.d/schemas/iso_countries.sql'
+
 \echo '==> Creating indices...'
 \i '/docker-entrypoint-initdb.d/schemas/indices.sql'
 
-\echo '==> Seeding staging tables...'
-\i '/docker-entrypoint-initdb.d/seeds/seed_test_data.sql'
+-- \echo '==> Seeding staging tables...'
+-- \i '/docker-entrypoint-initdb.d/seeds/seed_test_data.sql'

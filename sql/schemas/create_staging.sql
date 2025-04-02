@@ -4,13 +4,48 @@ CREATE SCHEMA IF NOT EXISTS staging;
 -- staging.country
 CREATE TABLE staging.country (
     country_id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    economic_system VARCHAR(100),
-    suicide_rate NUMERIC(5,2),
-    major_religion VARCHAR(100),
-    birth_rate NUMERIC(5,2),
-    divorce_rate NUMERIC(5,2)
+    name VARCHAR(255),
+    iso2 CHAR(2) NOT NULL,
+    region VARCHAR(100),
+    capital VARCHAR(100),
+    population NUMERIC,
+    surface_area NUMERIC,
+    pop_density NUMERIC,
+    pop_growth NUMERIC,
+    urban_population NUMERIC,
+    urban_population_growth NUMERIC,
+    fertility NUMERIC,
+    infant_mortality NUMERIC,
+    life_expectancy_male NUMERIC,
+    life_expectancy_female NUMERIC,
+    sex_ratio NUMERIC,
+    internet_users NUMERIC,
+    co2_emissions NUMERIC,
+    employment_agriculture NUMERIC,
+    employment_industry NUMERIC,
+    employment_services NUMERIC,
+    primary_school_enrollment_male NUMERIC,
+    primary_school_enrollment_female NUMERIC,
+    secondary_school_enrollment_male NUMERIC,
+    secondary_school_enrollment_female NUMERIC,
+    post_secondary_enrollment_male NUMERIC,
+    post_secondary_enrollment_female NUMERIC,
+    gdp NUMERIC,
+    gdp_per_capita NUMERIC,
+    gdp_growth NUMERIC,
+    exports NUMERIC,
+    imports NUMERIC,
+    refugees NUMERIC,
+    threatened_species INTEGER,
+    forested_area NUMERIC,
+    tourists NUMERIC,
+    homicide_rate NUMERIC,
+    unemployment NUMERIC,
+    currency_code VARCHAR(10),
+    currency_name VARCHAR(50)
 );
+
+
 
 -- staging.genre
 CREATE TABLE staging.genre (
@@ -73,3 +108,13 @@ CREATE TABLE staging.song (
     drug_mentions_count INTEGER,
     dominant_listener_gender VARCHAR(50)
 );
+
+
+CREATE TABLE staging.iso_countries(
+    iso_countries_id SERIAL PRIMARY KEY,
+    iso3           VARCHAR(3) NOT NULL,
+    iso_num        INTEGER  NOT NULL,
+    country        VARCHAR(58) NOT NULL,
+    country_common VARCHAR(44) NOT NULL
+);
+

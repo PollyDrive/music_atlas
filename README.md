@@ -1,4 +1,4 @@
-Music Atlas is a silly correlations platform which shows various weird connections between artist or  genres popularity and different country's indicators such as wealth or suicide index.
+Music Atlas is a silly correlations platform which shows various weird connections between artist or genres popularity and different country's indicators such as wealth or suicide index.
 
 created to:
 - collects data about songs (metadata + lyrics) from various open music databases.
