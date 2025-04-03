@@ -9,7 +9,7 @@ services:
     ports:
       - "${POSTGRES_PORT}:5432"  
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
       - ./sql:/docker-entrypoint-initdb.d
     networks:
       - music_net
@@ -27,3 +27,6 @@ services:
 networks:
   music_net:
     driver: bridge
+
+volumes:
+  pgdata:

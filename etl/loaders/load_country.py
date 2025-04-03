@@ -19,9 +19,9 @@ def main():
     # Словарь country -> iso2
     country_to_iso2 = dict(zip(iso_df['country_common'], iso_df['iso2']))
 
-    # country_names = countries_df['country_common'].tolist()
-    # logging.info(f"Number of countries: {len(country_names)}")
-    country_names = ['United States of America', 'Sweden']
+    country_names = iso_df['country_common'].tolist()
+    logging.info(f"Number of countries: {len(country_names)}")
+    # country_names = ['United States of America', 'Sweden'] # для отладки чтобы не дергать апи
     all_data = []
 
     for country in country_names:
