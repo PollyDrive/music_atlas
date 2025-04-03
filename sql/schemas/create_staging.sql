@@ -1,11 +1,21 @@
 -- Создаем схемы
 CREATE SCHEMA IF NOT EXISTS staging;
 
+-- staging.iso_countries
+CREATE TABLE staging.iso_countries(
+  iso_countries_id SERIAL PRIMARY KEY,
+  iso2 CHAR(2) UNIQUE NOT NULL,
+  iso3 VARCHAR(3) NOT NULL,
+  iso_num VARCHAR(3) NOT NULL,
+  country VARCHAR(58) NOT NULL,
+  country_common VARCHAR(44) NOT NULL
+);
+
 -- staging.country
 CREATE TABLE staging.country (
     country_id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    iso2 CHAR(2) NOT NULL,
+    iso2 CHAR(2) NOT NULL REFERENCES staging.iso_countries(iso2),
     region VARCHAR(100),
     capital VARCHAR(100),
     population NUMERIC,
@@ -44,8 +54,6 @@ CREATE TABLE staging.country (
     currency_code VARCHAR(10),
     currency_name VARCHAR(50)
 );
-
-
 
 -- staging.genre
 CREATE TABLE staging.genre (
@@ -108,13 +116,3 @@ CREATE TABLE staging.song (
     drug_mentions_count INTEGER,
     dominant_listener_gender VARCHAR(50)
 );
-
-
-CREATE TABLE staging.iso_countries(
-    iso_countries_id SERIAL PRIMARY KEY,
-    iso3           VARCHAR(3) NOT NULL,
-    iso_num        INTEGER  NOT NULL,
-    country        VARCHAR(58) NOT NULL,
-    country_common VARCHAR(44) NOT NULL
-);
-

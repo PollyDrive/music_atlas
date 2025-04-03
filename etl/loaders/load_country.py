@@ -12,7 +12,13 @@ def main():
     logging.info("=== START country loader ===")
     engine = create_engine(get_db_url())
     
-    countries_df = pd.read_sql("SELECT country_common FROM staging.iso_countries", con=engine)
+    # Загружаем список стран с ISO2
+    iso_df = pd.read_sql("SELECT country_common, iso2 FROM staging.iso_countries", con=engine)
+    # Уже загруженные iso2
+    existing_iso2 = pd.read_sql("SELECT iso2 FROM staging.country", con=engine)['iso2'].tolist()
+    # Словарь country -> iso2
+    country_to_iso2 = dict(zip(iso_df['country_common'], iso_df['iso2']))
+
     # country_names = countries_df['country_common'].tolist()
     # logging.info(f"Number of countries: {len(country_names)}")
     country_names = ['United States of America', 'Sweden']
@@ -20,6 +26,11 @@ def main():
 
     for country in country_names:
         logging.info(f"Requesting: {country}")
+        country_iso2 = country_to_iso2.get(country)
+        if country_iso2 in existing_iso2:
+            logging.info(f"⏩ {country} (ISO2={country_iso2}) уже есть в staging.country, пропускаем")
+            continue
+
         response = requests.get(
             "https://api.api-ninjas.com/v1/country",
             headers=headers,
