@@ -2,7 +2,7 @@
 CREATE SCHEMA IF NOT EXISTS staging;
 
 -- staging.iso_countries
-CREATE TABLE staging.iso_countries(
+CREATE TABLE IF NOT EXISTS staging.iso_countries(
   iso_countries_id SERIAL PRIMARY KEY,
   iso2 CHAR(2) UNIQUE NOT NULL,
   iso3 VARCHAR(3) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE staging.iso_countries(
 );
 
 -- staging.country
-CREATE TABLE staging.country (
+CREATE TABLE IF NOT EXISTS staging.country (
     country_id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     iso2 CHAR(2) NOT NULL REFERENCES staging.iso_countries(iso2),
@@ -54,20 +54,25 @@ CREATE TABLE staging.country (
     currency_code VARCHAR(10),
     currency_name VARCHAR(50)
 );
-
--- staging.genre
-CREATE TABLE staging.genre (
-    genre_id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    subgenre VARCHAR(100),
-    origin_country VARCHAR(100),
-    origin_year INTEGER
+-- staging.country_top_artists
+CREATE TABLE IF NOT EXISTS staging.country_top_artists (
+	id SERIAL PRIMARY KEY,
+	mbid VARCHAR(255), -- может быть NULL
+	top_artist_id INTEGER REFERENCES staging.artist(artist_id), -- суррогатная ссылка
+    country_iso2 CHAR(2),
+    rank INTEGER,
+    artist_name VARCHAR(255),
+    playcount INTEGER,
+    fetch_date DATE DEFAULT CURRENT_DATE,
+    UNIQUE (country_iso2, top_artist_id, fetch_date),
+    CONSTRAINT unique_cta_entry UNIQUE (country_iso2, mbid, fetch_date)
 );
 
 -- staging.artist
 CREATE TABLE staging.artist (
-    artist_id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+	artist_id SERIAL PRIMARY KEY,
+    mbid VARCHAR(255) UNIQUE, -- может быть NULL
+    name VARCHAR(255),
     alias VARCHAR(255),
     country_id INTEGER REFERENCES staging.country(country_id),
     birth_year INTEGER,
@@ -81,8 +86,17 @@ CREATE TABLE staging.artist (
     fan_subculture VARCHAR(100)
 );
 
+-- staging.genre
+CREATE TABLE IF NOT EXISTS staging.genre (
+    genre_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    subgenre VARCHAR(100),
+    origin_country VARCHAR(100),
+    origin_year INTEGER
+);
+
 -- staging.album
-CREATE TABLE staging.album (
+CREATE TABLE IF NOT EXISTS staging.album (
     album_id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     artist_id INTEGER REFERENCES staging.artist(artist_id),
@@ -93,7 +107,7 @@ CREATE TABLE staging.album (
 );
 
 -- staging.song
-CREATE TABLE staging.song (
+CREATE TABLE IF NOT EXISTS staging.song (
     song_id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     artist_id INTEGER REFERENCES staging.artist(artist_id),

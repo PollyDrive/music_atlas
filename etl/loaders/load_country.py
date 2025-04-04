@@ -3,14 +3,17 @@ import pandas as pd
 import requests
 import os
 import time
-from sqlalchemy import create_engine
+from utils.db import get_engine
+from utils.logger import get_logger
+
+logger = get_logger("country_loader", "logs/load_country.log")
+engine = get_engine()
 
 API_KEY = os.getenv('API_NINJAS_KEY')
 headers = {'X-Api-Key': API_KEY}
 
 def main():
     logging.info("=== START country loader ===")
-    engine = create_engine(get_db_url())
     
     # Загружаем список стран с ISO2
     iso_df = pd.read_sql("SELECT country_common, iso2 FROM staging.iso_countries", con=engine)
@@ -46,14 +49,16 @@ def main():
                     "currency_code": item.get("currency", {}).get("code"),
                     "currency_name": item.get("currency", {}).get("name")
                 }
-                all_data.append(item_flat)
-                logging.info(f"✅ Данные для {country} получены")
+                
+                df = pd.DataFrame([item_flat])
+                df.to_sql('country', schema='staging', con=engine, if_exists='append', index=False)
+                logging.info(f"✅ Загружено в БД: {country}")
             else:
                 logging.warning(f"Пустой ответ для {country}")
         else:
             logging.warning(f"❌ Ошибка для {country}: {response.status_code} - {response.text}")
 
-        time.sleep(0.5)
+        time.sleep(0.3)
 
     if all_data:
         df = pd.json_normalize(all_data)
