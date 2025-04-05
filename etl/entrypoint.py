@@ -12,25 +12,25 @@ def main():
     logging.info("=== ETL PIPELINE START ===")
     
     # Step 1: Country Loader
-    # try:
-    #     load_country.main()
-    #     logging.info("Country load finished successfully.")
-    # except Exception as e:
-    #     logging.error(f"Country loader failed: {e}")
+    try:
+        load_country.main()
+        logging.info("Country load finished successfully.")
+    except Exception as e:
+        logging.error(f"Country loader failed: {e}")
 
-    Step 2: Genre Loader (заготовка)
+    # Step 2: Genre Loader (заготовка)
     try:
         load_lastfm_top_artists.main()
         logging.info("Genre load finished successfully.")
     except Exception as e:
         logging.error(f"Genre loader failed: {e}")
 
-    # Step 3: Author Loader (заготовка)
-    # try:
-    #     load_author.main()
-    #     logging.info("Author load finished successfully.")
-    # except Exception as e:
-    #     logging.error(f"Author loader failed: {e}")
+    # Step 3: Artist Loader (заготовка)
+    try:
+        load_artist_info.main()
+        logging.info("Artist load finished successfully.")
+    except Exception as e:
+        logging.error(f"Artist loader failed: {e}")
 
     logging.info("=== ETL PIPELINE FINISHED ===")
 

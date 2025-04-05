@@ -17,7 +17,7 @@ logger = get_logger("lastfm_loader", "logs/load_lastfm_top_artists.log")
 engine = get_engine()
 
 LASTFM_API_KEY = os.getenv("LASTFM_API_KEY")
-LASTFM_API_URL = "http://ws.audioscrobbler.com/2.0/"
+LASTFM_API_URL = os.getenv("LASTFM_API_URL")
 
 
 def fetch_top_artists(country_name):

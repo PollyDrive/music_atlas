@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS staging.country_top_artists (
 );
 
 -- staging.artist
-CREATE TABLE staging.artist (
+CREATE TABLE IF NOT EXISTS staging.artist (
 	artist_id SERIAL PRIMARY KEY,
     mbid VARCHAR(255) UNIQUE, -- может быть NULL
     name VARCHAR(255),
@@ -84,7 +84,20 @@ CREATE TABLE staging.artist (
     performance_count INTEGER,
     scandal_index NUMERIC(5,2),
     fan_subculture VARCHAR(100)
+    bio_summary TEXT,
+    listeners BIGINT,
+    playcount BIGINT,
+    tags TEXT,
+    url TEXT
 );
+
+-- ALTER TABLE staging.artist
+-- ADD COLUMN bio_summary TEXT,
+-- ADD COLUMN listeners BIGINT,
+-- ADD COLUMN playcount BIGINT,
+-- ADD COLUMN tags TEXT,
+-- ADD COLUMN url TEXT;
+
 
 -- staging.genre
 CREATE TABLE IF NOT EXISTS staging.genre (
