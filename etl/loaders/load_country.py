@@ -1,4 +1,4 @@
-from etl.utils import get_db_url, logging   # <--- вот где вызывается utils
+from utils import logging   # <--- вот где вызывается utils
 import pandas as pd
 import requests
 import os
@@ -68,3 +68,5 @@ def main():
         logging.warning("No data received")
 
     logging.info("=== END country loader ===")
+if __name__ == "__main__":
+    main()

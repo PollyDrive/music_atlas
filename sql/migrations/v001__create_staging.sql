@@ -54,19 +54,6 @@ CREATE TABLE IF NOT EXISTS staging.country (
     currency_code VARCHAR(10),
     currency_name VARCHAR(50)
 );
--- staging.country_top_artists
-CREATE TABLE IF NOT EXISTS staging.country_top_artists (
-	id SERIAL PRIMARY KEY,
-	mbid VARCHAR(255), -- может быть NULL
-	top_artist_id INTEGER REFERENCES staging.artist(artist_id), -- суррогатная ссылка
-    country_iso2 CHAR(2),
-    rank INTEGER,
-    artist_name VARCHAR(255),
-    playcount INTEGER,
-    fetch_date DATE DEFAULT CURRENT_DATE,
-    UNIQUE (country_iso2, top_artist_id, fetch_date),
-    CONSTRAINT unique_cta_entry UNIQUE (country_iso2, mbid, fetch_date)
-);
 
 -- staging.artist
 CREATE TABLE IF NOT EXISTS staging.artist (
@@ -75,7 +62,6 @@ CREATE TABLE IF NOT EXISTS staging.artist (
     name VARCHAR(255),
     alias VARCHAR(255),
     country_id INTEGER REFERENCES staging.country(country_id),
-    birth_year INTEGER,
     found_year INTEGER,
     wealth_index NUMERIC(5,2),
     crime_index NUMERIC(5,2),
@@ -83,7 +69,7 @@ CREATE TABLE IF NOT EXISTS staging.artist (
     sex_index NUMERIC(5,2),
     performance_count INTEGER,
     scandal_index NUMERIC(5,2),
-    fan_subculture VARCHAR(100)
+    fan_subculture VARCHAR(100),
     bio_summary TEXT,
     listeners BIGINT,
     playcount BIGINT,
@@ -91,13 +77,17 @@ CREATE TABLE IF NOT EXISTS staging.artist (
     url TEXT
 );
 
--- ALTER TABLE staging.artist
--- ADD COLUMN bio_summary TEXT,
--- ADD COLUMN listeners BIGINT,
--- ADD COLUMN playcount BIGINT,
--- ADD COLUMN tags TEXT,
--- ADD COLUMN url TEXT;
-
+-- staging.country_top_artists
+CREATE TABLE IF NOT EXISTS staging.country_top_artists (
+	id SERIAL PRIMARY KEY,
+	mbid VARCHAR(255), -- может быть NULL
+	top_artist_id INTEGER REFERENCES staging.artist(artist_id),
+    country_iso2 CHAR(2),
+    rank INTEGER,
+    artist_name VARCHAR(255),
+    playcount INTEGER,
+    fetch_date DATE DEFAULT CURRENT_DATE
+);
 
 -- staging.genre
 CREATE TABLE IF NOT EXISTS staging.genre (

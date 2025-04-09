@@ -10,10 +10,6 @@ from utils.logger import get_logger
 
 logger = get_logger("lastfm_loader", "logs/load_lastfm_top_artists.log")
 
-# logger.info("🟢 Done")
-# logger.warning("⚠️ Warning")
-# logger.error("🔥 Critical")
-
 engine = get_engine()
 
 LASTFM_API_KEY = os.getenv("LASTFM_API_KEY")

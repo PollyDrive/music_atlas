@@ -1,6 +1,7 @@
 import logging
 from etl.loaders import load_country
 from etl.loaders import load_lastfm_top_artists
+from etl.loaders import load_artist_info
 # from etl import load_genre, load_author  # добавишь позже
 
 # logging.basicConfig(

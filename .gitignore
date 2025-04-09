@@ -38,3 +38,6 @@ Thumbs.db
 # backups
 backup.sql
 data/
+
+# violations
+violations/

@@ -11,8 +11,8 @@ DROP TABLE IF EXISTS staging.song CASCADE;
 DROP TABLE IF EXISTS staging.album CASCADE;
 DROP TABLE IF EXISTS staging.artist CASCADE;
 DROP TABLE IF EXISTS staging.genre CASCADE;
--- DROP TABLE IF EXISTS staging.iso_countries CASCADE;
--- DROP TABLE IF EXISTS staging.country CASCADE;
+DROP TABLE IF EXISTS staging.iso_countries CASCADE;
+DROP TABLE IF EXISTS staging.country CASCADE;
 
 
 -- Очистить таблицы
