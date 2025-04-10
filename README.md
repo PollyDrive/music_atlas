@@ -26,19 +26,18 @@ Music Atlas — это платформа для дурацких корреля
 - корреляции и статистика на графиках по годам.
 
 ## Стек
-PostgreSQL
-Docker
-Python ≥ 3.10
-pandas
-SQLAlchemy
-psycopg2
-Alembic
+PostgreSQL, 
+Docker, 
+Python ≥ 3.10, 
+pandas, 
+SQLAlchemy, 
+psycopg2, 
+Alembic 
 
 ## Инициализация
 1. получи все необходимые ключи (API_NINJAS_KEY, LASTFM_API_KEY)
 2. Таблица iso_country заполняется сразу при создании схем
-3. python3 -m etl.staging_entrypoint запустит 3 лоадера на внешние адреса
-4. После успешного заполнения базы сохрани все csv в /data
+3. После успешного заполнения базы сохрани все csv в /data
    Ожидаемые пути:
     `./data/country.csv`
     `./data/artist.csv`
@@ -46,7 +45,9 @@ Alembic
 
 
 `docker-compose up --build`
+
 `'python3 -m etl.staging_entrypoint`
+запустит 3 лоадера на внешние адреса
 
 
 ## Повторный запуск
@@ -57,4 +58,19 @@ Alembic
 2. обрабатывает значения 'NA' (!) и null
 3. загружает данные в таблицы staging.country, staging.artist, staging.country_top_artists
 
-`alembic upgrade head` накатит обновления по табличкам
+`alembic upgrade head` 
+Накатит обновления по табличкам
+
+`python3 -m etl.loaders.load_artist_tags_from_lastfm` 
+На случай, если в первый раз ласт проебал теги
+
+`python3 -m etl.loaders.patch_artist_mbid` 
+Костыль для группы Queen, для которой last.fm отдаёт неправильный mbid японской девочки Tomomi Itano 
+
+### Next step
+
+`python3 -m etl.cleansed.build_artist_tag_lastfm`
+Сопоставляю исполнителя с жанрами, делю строку тегов на отдельные жанры
+
+`python3 -m etl.cleansed.load_tag_info_lastfm.py`
+Загружаю подробную инфу про жанры

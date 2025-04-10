@@ -16,6 +16,7 @@
 \i '/docker-entrypoint-initdb.d/schemas/iso_countries.sql'
 \i '/docker-entrypoint-initdb.d/migrations/V002__add_fields_to_artist.sql'
 \i '/docker-entrypoint-initdb.d/migrations/v003__create_indices.sql'
+\i '/docker-entrypoint-initdb.d/migrations/v004__cleansed_tag_info.sql'
 
 
 
