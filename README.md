@@ -74,3 +74,6 @@ Alembic
 
 `python3 -m etl.cleansed.load_tag_info_lastfm.py`
 Загружаю подробную инфу про жанры
+
+### Витрины
+`python3 -m etl.mart_entrypoint.py` разбивает country по тематикам

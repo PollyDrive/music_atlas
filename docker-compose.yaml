@@ -14,15 +14,15 @@ services:
     networks:
       - music_net
 
-  # metabase:
-  #   image: metabase/metabase:latest
-  #   container_name: metabase
-  #   ports:
-  #     - "${METABASE_PORT}:3000"
-  #   depends_on:
-  #     - postgres
-  #   networks:
-  #     - music_net
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    ports:
+      - "${METABASE_PORT}:3000"
+    depends_on:
+      - postgres
+    networks:
+      - music_net
 
 networks:
   music_net:
