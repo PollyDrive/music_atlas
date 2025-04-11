@@ -1,12 +1,12 @@
-DROP SCHEMA IF NOT EXISTS mart;
-CREATE SCHEMA IF NOT EXISTS mart;
+DROP SCHEMA IF NOT EXISTS cleansed;
+CREATE SCHEMA IF NOT EXISTS cleansed;
 
-DROP TABLE IF EXISTS mart.life_value;
-DROP TABLE IF EXISTS mart.population;
-DROP TABLE IF EXISTS mart.gdp;
-DROP TABLE IF EXISTS mart.education;
-DROP TABLE IF EXISTS mart.employment;
-DROP TABLE IF EXISTS mart.others;
+DROP TABLE IF EXISTS cleansed.life_value;
+DROP TABLE IF EXISTS cleansed.population;
+DROP TABLE IF EXISTS cleansed.gdp;
+DROP TABLE IF EXISTS cleansed.education;
+DROP TABLE IF EXISTS cleansed.employment;
+DROP TABLE IF EXISTS cleansed.others;
 
 
 ---сначала дропаем дубликаты
@@ -24,7 +24,7 @@ WHERE a.name = dup.name
 
 
 
-CREATE TABLE mart.life_value AS
+CREATE TABLE cleansed.life_value AS
 SELECT
     iso2,
     name,
@@ -35,7 +35,7 @@ SELECT
     infant_mortality
 FROM staging.country;
 
-CREATE TABLE mart.population AS
+CREATE TABLE cleansed.population AS
 SELECT
     iso2,
     name,
@@ -51,7 +51,7 @@ SELECT
     tourists
 FROM staging.country;
 
-CREATE TABLE mart.gdp AS
+CREATE TABLE cleansed.gdp AS
 SELECT
     iso2,
     name,
@@ -63,7 +63,7 @@ SELECT
     imports
 FROM staging.country;
 
-CREATE TABLE mart.education AS
+CREATE TABLE cleansed.education AS
 SELECT
     iso2,
     name,
@@ -77,7 +77,7 @@ SELECT
 FROM staging.country;
 
 
-CREATE TABLE mart.employment AS
+CREATE TABLE cleansed.employment AS
 SELECT
     iso2,
     name,
@@ -89,7 +89,7 @@ SELECT
 FROM staging.country;
 
 
-CREATE TABLE mart.others AS
+CREATE TABLE cleansed.others AS
 SELECT
     iso2,
     name,

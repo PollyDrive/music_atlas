@@ -69,6 +69,9 @@ Alembic
 
 ### Next step
 
+`python3 -m etl.cleansed.cleansed_country_decomp.py` 
+разбивает country по тематикам
+
 `python3 -m etl.cleansed.build_artist_tag_lastfm`
 Сопоставляю исполнителя с жанрами, делю строку тегов на отдельные жанры
 
@@ -76,4 +79,3 @@ Alembic
 Загружаю подробную инфу про жанры
 
 ### Витрины
-`python3 -m etl.mart_entrypoint.py` разбивает country по тематикам
