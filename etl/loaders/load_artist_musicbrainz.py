@@ -67,7 +67,22 @@ for artist in artists:
         print(f"✅ {name} ({mbid}) обогащён")
         time.sleep(.2)
 
+        
     except Exception as e:
         print(f"❌ Ошибка при обработке {name}: {e}")
 
 print(f"🎉 Обновлено артистов: {len(updated_rows)}")
+
+# и сразу патч для Мэнсона
+patch_query = text("""
+    UPDATE staging.country_top_artist
+    SET artist_name = alias
+    WHERE LOWER(name) IN ('[unknown]', 'unknown', 'unknown artist')
+      AND alias IS NOT NULL
+      AND alias <> '';
+""")
+
+
+with engine.begin() as conn:
+    result = conn.execute(patch_query)
+print("✅ Имена [unknown] обновлены на значения из alias")

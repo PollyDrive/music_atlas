@@ -18,5 +18,6 @@
 \i '/docker-entrypoint-initdb.d/migrations/v003__create_indices.sql'
 \i '/docker-entrypoint-initdb.d/migrations/v004__cleansed_tag_info.sql'
 
+\i '/docker-entrypoint-initdb.d/migrations/v006__add_to_countries.sql'
 
 

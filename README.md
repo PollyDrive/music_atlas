@@ -69,6 +69,9 @@ Alembic
 
 ### Next step
 
+`python3 -m etl.pre_cleanup_artists`
+Чистит name от unknown artist, меняет на алиас
+
 `python3 -m etl.cleansed.cleansed_country_decomp.py` 
 разбивает country по тематикам
 

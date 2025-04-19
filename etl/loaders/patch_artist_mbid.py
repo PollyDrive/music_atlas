@@ -40,6 +40,20 @@ with engine.begin() as conn:
     """))
 
 print("✅ Патч для Queen применён")
+# --------------------------------------------------------------------------------
+patch_query = text("""
+    UPDATE staging.artist
+    SET name = alias
+    WHERE LOWER(name) IN ('[unknown]', 'unknown', 'unknown artist')
+      AND alias IS NOT NULL
+      AND alias <> '';
+""")
+
+
+with engine.begin() as conn:
+    result = conn.execute(patch_query)
+
+print("✅ Имена [unknown] обновлены на значения из alias")
 
 
 response = requests.get(URL, headers=HEADERS)
