@@ -8,7 +8,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger("depression_rate")
 
 engine = get_engine()
-# https://rsf.org/en/index?year=2024
 CSV_PATH = "data/IHME-GBD_2021_DATA.csv"
 
 # Чтение и предварительный вывод заголовков

@@ -102,3 +102,16 @@ SELECT
     currency_code,
     currency_name
 FROM staging.country;
+
+CREATE TABLE cleansed.social AS
+SELECT
+    iso2,
+    name,
+    region,
+    majority_religion,
+    languages,
+    press_freedom_2024,
+    suicide_rate_2021,
+    depression_rate_2021,
+    alcohol_per_capita_2019
+FROM staging.country;
