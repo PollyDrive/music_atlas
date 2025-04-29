@@ -4,9 +4,12 @@ from utils.db import get_engine
 
 # Пути к CSV-файлам
 FILES = {
-    "country": "./data/country_backup.csv",
-    "artist": "./data/artist_backup.csv",
-    "country_top_artists": "./data/country_top_artists_backup.csv"
+    "country": "./data/backups/country_backup.csv",
+    "artist": "./data/backups/artist_backup.csv",
+    "country_top_artists": "./data/backups/country_top_artists_backup.csv",
+    "all_countries_religion": "./data/all_countries_religion.csv",
+    "ihme_gbd": "./data/ihme_gbd_202504191722.csv",
+    "RSF_2024_Data": "./data/RSF_2024_Data.csv",
 }
 
 SCHEMA = "staging"
@@ -16,7 +19,7 @@ for table_name, path in FILES.items():
     if not os.path.exists(path):
         print(f"❌ Файл не найден: {path}")
         continue
-
+    
     print(f"📥 Загружаем {table_name} из {path}...")
     df = pd.read_csv(path, keep_default_na=False)  # сохраняем 'NA' как строку
 

@@ -7,3 +7,5 @@ CREATE TABLE IF NOT EXISTS cleansed.tag_info (
     taggings INT,
     fetch_date DATE DEFAULT CURRENT_DATE
 );
+
+--Сделать: country_language

@@ -1,0 +1,205 @@
+"measure_name","location_id","location_name","cause_name","year","val","upper","lower","iso3","iso2"
+Prevalence,49,Republic of North Macedonia,Depressive disorders,2021,87485.79,106504.02,71700.46,,MK
+Prevalence,12,Laos,Depressive disorders,2021,211888.27,261864.7,170566.06,,LA
+Prevalence,111,Dominican Republic,Depressive disorders,2021,467824.56,595302.25,370695.44,,DO
+Prevalence,171,Democratic Republic of the Congo,Depressive disorders,2021,4282124.5,5437001.5,3394779.2,,CD
+Prevalence,320,Cook Islands,Depressive disorders,2021,681.10315,839.9492,549.0077,,CK
+Prevalence,47,Czechia,Depressive disorders,2021,466479.03,563973.9,378771.6,,CZ
+Prevalence,35,Georgia,Depressive disorders,2021,181744.67,221727.22,146492.3,,GE
+Prevalence,349,Greenland,Depressive disorders,2021,4476.695,5524.266,3587.3164,,GL
+Prevalence,112,Grenada,Depressive disorders,2021,4118.143,5016.336,3324.7087,,GD
+Prevalence,351,Guam,Depressive disorders,2021,6217.1294,7501.8027,5125.609,,GU
+Prevalence,48,Hungary,Depressive disorders,2021,428251.9,514916.1,348082.06,,HU
+Prevalence,84,Ireland,Depressive disorders,2021,276289.44,344858.12,226086.45,,IE
+Prevalence,115,Jamaica,Depressive disorders,2021,107967.89,136473.42,85941.195,,JM
+Prevalence,67,Japan,Depressive disorders,2021,3831422.2,4214943.0,3454827.0,,JP
+Prevalence,7,Korea (the Democratic People's Republic of),Depressive disorders,2021,887635.44,1074799.6,722959.4,,KP
+Prevalence,60,Republic of Lithuania,Depressive disorders,2021,183515.69,229059.56,150897.9,,LT
+Prevalence,87,Grand Duchy of Luxembourg,Depressive disorders,2021,28620.266,34835.97,23380.719,,LU
+Prevalence,13,Malaysia,Depressive disorders,2021,1224107.9,1513419.1,1002662.8,,MY
+Prevalence,24,Republic of the Marshall Islands,Depressive disorders,2021,1653.6467,2036.3367,1354.6935,,MH
+Prevalence,25,Federated States of Micronesia,Depressive disorders,2021,3077.5737,3798.2378,2488.3271,,FM
+Prevalence,38,Mongolia,Depressive disorders,2021,136589.88,170856.8,111793.125,,MN
+Prevalence,376,Northern Mariana Islands,Depressive disorders,2021,1705.4894,2093.2004,1417.7125,,MP
+Prevalence,149,Palestine,Depressive disorders,2021,340434.28,428337.78,265124.9,,PS
+Prevalence,16,Republic of the Philippines,Depressive disorders,2021,3709737.0,4210611.0,3283798.5,,PH
+Prevalence,62,Russian Federation,Depressive disorders,2021,6769072.0,7639646.5,6009569.5,,RU
+Prevalence,116,Saint Lucia,Depressive disorders,2021,8166.5156,10190.817,6457.0884,,LC
+Prevalence,117,Saint Vincent and the Grenadines,Depressive disorders,2021,4856.726,5884.4087,3943.7234,,VC
+Prevalence,27,Independent State of Samoa,Depressive disorders,2021,5530.7485,6776.9487,4497.201,,WS
+Prevalence,54,Slovakia,Depressive disorders,2021,229964.75,277490.25,186495.7,,SK
+Prevalence,28,Solomon Islands,Depressive disorders,2021,18686.615,23021.04,15095.434,,SB
+Prevalence,17,Democratic Socialist Republic of Sri Lanka,Depressive disorders,2021,810661.7,979304.3,672484.06,,LK
+Prevalence,94,Switzerland,Depressive disorders,2021,490965.3,606699.2,397509.66,,CH
+Prevalence,153,Syrian Arab Republic,Depressive disorders,2021,705460.0,901228.4,557102.5,,SY
+Prevalence,18,Kingdom of Thailand,Depressive disorders,2021,2663108.0,3155243.5,2212343.8,,TH
+Prevalence,19,Democratic Republic of Timor-Leste,Depressive disorders,2021,37193.895,45563.945,29870.05,,TL
+Prevalence,413,Tokelau,Depressive disorders,2021,46.88757,59.003254,37.579254,,TK
+Prevalence,29,Kingdom of Tonga,Depressive disorders,2021,2668.5935,3264.9534,2204.9062,,TO
+Prevalence,40,Turkmenistan,Depressive disorders,2021,180174.23,216537.92,146366.98,,TM
+Prevalence,416,Tuvalu,Depressive disorders,2021,403.52808,506.5196,322.09088,,TV
+Prevalence,63,Ukraine,Depressive disorders,2021,2701440.0,3270503.2,2201974.8,,UA
+Prevalence,156,United Arab Emirates,Depressive disorders,2021,522502.03,683075.7,404771.88,,AE
+Prevalence,102,United States of America,Depressive disorders,2021,19166792,21241048,17355638,,US
+Prevalence,20,Socialist Republic of Viet Nam,Depressive disorders,2021,2935091.8,3522608.0,2422691.5,,VN
+Prevalence,97,Argentina,Depressive disorders,2021,1545527.4,1858875.8,1271194.9,,AR
+Prevalence,106,Commonwealth of the Bahamas,Depressive disorders,2021,15050.468,18748.781,11845.009,,BS
+Prevalence,76,Kingdom of Belgium,Depressive disorders,2021,551178.1,668930.6,451939.16,,BE
+Prevalence,121,Plurinational State of Bolivia,Depressive disorders,2021,497235.97,629762.2,397340.53,,BO
+Prevalence,10,Kingdom of Cambodia,Depressive disorders,2021,561155.06,673598.0,450413.97,,KH
+Prevalence,8,Taiwan (Province of China),Depressive disorders,2021,866213.1,1028186.4,714852.25,,CN
+Prevalence,6,People's Republic of China,Depressive disorders,2021,53114656,59334612,47435176,,CN
+Prevalence,110,Commonwealth of Dominica,Depressive disorders,2021,2635.7415,3317.0042,2122.5347,,DM
+Prevalence,22,Republic of Fiji,Depressive disorders,2021,29795.184,36462.348,24552.92,,FJ
+Prevalence,79,Republic of Finland,Depressive disorders,2021,317876.44,380438.78,259440.16,,FI
+Prevalence,80,France,Depressive disorders,2021,3522678.5,4292025.0,2901493.8,,FR
+Prevalence,82,Greece,Depressive disorders,2021,742471.25,935687.06,592811.06,,GR
+Prevalence,26,Independent State of Papua New Guinea,Depressive disorders,2021,287340.4,352293.72,233218.52,,GN
+Prevalence,11,Republic of Indonesia,Depressive disorders,2021,8347347.0,9410131.0,7396640.5,,ID
+Prevalence,23,Republic of Kiribati,Depressive disorders,2021,3454.0693,4198.235,2828.8494,,KI
+Prevalence,68,Korea (the Republic of),Depressive disorders,2021,1477946.4,1756526.4,1221230.8,,KR
+Prevalence,37,Kyrgyzstan,Depressive disorders,2021,261329.58,319242.34,214066.1,,KG
+Prevalence,59,Republic of Latvia,Depressive disorders,2021,115857.445,142989.25,90313.016,,LV
+Prevalence,14,Republic of Maldives,Depressive disorders,2021,18624.098,22803.656,15498.587,,MV
+Prevalence,61,Republic of Moldova,Depressive disorders,2021,181854.64,220676.23,148124.66,,MD
+Prevalence,50,Montenegro,Depressive disorders,2021,26148.098,32070.793,21260.7,,ME
+Prevalence,15,Republic of the Union of Myanmar,Depressive disorders,2021,1490807.6,1808106.6,1224917.6,,MM
+Prevalence,89,Kingdom of the Netherlands,Depressive disorders,2021,846284.7,1054223.1,687337.56,,NL
+Prevalence,72,New Zealand,Depressive disorders,2021,207189.03,251479.53,173331.53,,NZ
+Prevalence,91,Portugal,Depressive disorders,2021,728476.75,910918.0,584791.1,,PT
+Prevalence,385,Puerto Rico,Depressive disorders,2021,126122.32,154522.48,104082.23,,PR
+Prevalence,52,Romania,Depressive disorders,2021,778529.9,939581.8,637637.7,,RO
+Prevalence,393,Saint Kitts and Nevis,Depressive disorders,2021,3042.6528,3882.175,2316.5623,,KN
+Prevalence,95,United Kingdom,Depressive disorders,2021,3973992.5,4493875.0,3520775.8,,GB
+Prevalence,33,Republic of Armenia,Depressive disorders,2021,131265.95,159620.22,107304.93,,AM
+Prevalence,75,Republic of Austria,Depressive disorders,2021,370660.7,456971.94,302954.47,,AT
+Prevalence,34,Republic of Azerbaijan,Depressive disorders,2021,388047.9,462756.78,319157.03,,AZ
+Prevalence,57,Republic of Belarus,Depressive disorders,2021,589484.2,733752.4,476048.5,,BY
+Prevalence,170,Republic of the Congo,Depressive disorders,2021,307723.72,389427.88,239508.67,,CG
+Prevalence,83,Republic of Iceland,Depressive disorders,2021,13048.804,15755.006,10691.553,,IS
+Prevalence,142,Islamic Republic of Iran,Depressive disorders,2021,5211454.5,6082844.0,4452303.0,,IR
+Prevalence,85,State of Israel,Depressive disorders,2021,486164.97,601480.8,392370.88,,IL
+Prevalence,86,Republic of Italy,Depressive disorders,2021,3209198.5,3615106.0,2836973.5,,IT
+Prevalence,146,Lebanon,Depressive disorders,2021,366343.03,469143.53,289150.44,,LB
+Prevalence,130,Mexico,Depressive disorders,2021,5968590.5,6765298.5,5318409.5,,MX
+Prevalence,39,Republic of Tajikistan,Depressive disorders,2021,302516.8,373322.97,245784.73,,TJ
+Prevalence,99,Eastern Republic of Uruguay,Depressive disorders,2021,141599.14,178001.64,112048.92,,UY
+Prevalence,133,Bolivarian Republic of Venezuela,Depressive disorders,2021,1012033.44,1268988.2,816580.0,,VE
+Prevalence,43,Republic of Albania,Depressive disorders,2021,94653.35,114180.13,77936.484,,AL
+Prevalence,74,Principality of Andorra,Depressive disorders,2021,4553.8276,5607.2207,3657.9429,,AD
+Prevalence,140,Kingdom of Bahrain,Depressive disorders,2021,92743.76,117200.77,72331.15,,BH
+Prevalence,45,Republic of Bulgaria,Depressive disorders,2021,310731.03,376233.66,248386.23,,BG
+Prevalence,98,Republic of Chile,Depressive disorders,2021,931251.25,1196167.1,731665.4,,CL
+Prevalence,176,Union of the Comoros,Depressive disorders,2021,32600.418,40820.58,26196.027,,KM
+Prevalence,46,Republic of Croatia,Depressive disorders,2021,196332.47,240482.88,155655.22,,HR
+Prevalence,77,Republic of Cyprus,Depressive disorders,2021,57000.98,70343.52,46279.383,,CY
+Prevalence,205,C�te d'Ivoire,Depressive disorders,2021,862072.2,1061538.4,694710.3,,CI
+Prevalence,78,Kingdom of Denmark,Depressive disorders,2021,278863.0,336572.38,228092.6,,DK
+Prevalence,122,Republic of Ecuador,Depressive disorders,2021,722920.9,880139.06,585493.0,,EC
+Prevalence,58,Republic of Estonia,Depressive disorders,2021,77324.36,95152.2,62979.61,,EE
+Prevalence,206,Republic of the Gambia,Depressive disorders,2021,110356.445,136981.6,86510.875,,GM
+Prevalence,81,Federal Republic of Germany,Depressive disorders,2021,4109394.2,5124057.5,3326509.8,,DE
+Prevalence,114,Republic of Haiti,Depressive disorders,2021,466385.8,592653.9,370165.4,,HT
+Prevalence,143,Republic of Iraq,Depressive disorders,2021,1729589.1,2167736.8,1404187.4,,IQ
+Prevalence,36,Republic of Kazakhstan,Depressive disorders,2021,765561.3,922433.44,613346.1,,KZ
+Prevalence,145,State of Kuwait,Depressive disorders,2021,236054.02,299405.0,185647.75,,KW
+Prevalence,88,Republic of Malta,Depressive disorders,2021,18516.328,22496.6,15282.46,,MT
+Prevalence,90,Kingdom of Norway,Depressive disorders,2021,262860.06,298653.97,228707.1,,NO
+Prevalence,136,Republic of Paraguay,Depressive disorders,2021,278755.38,350112.5,222730.84,,PY
+Prevalence,51,Republic of Poland,Depressive disorders,2021,1281239.6,1440334.2,1138663.2,,PL
+Prevalence,151,State of Qatar,Depressive disorders,2021,159779.62,205656.1,126252.77,,QA
+Prevalence,53,Republic of Serbia,Depressive disorders,2021,381112.94,467570.16,308083.94,,RS
+Prevalence,69,Republic of Singapore,Depressive disorders,2021,143564.73,173669.81,117921.12,,SG
+Prevalence,55,Republic of Slovenia,Depressive disorders,2021,99922.93,124113.13,80886.34,,SI
+Prevalence,92,Kingdom of Spain,Depressive disorders,2021,2891041.0,3535436.5,2323617.0,,ES
+Prevalence,118,Republic of Suriname,Depressive disorders,2021,35669.36,44899.965,28219.385,,SR
+Prevalence,41,Republic of Uzbekistan,Depressive disorders,2021,1223301.9,1506327.5,993165.8,,UZ
+Prevalence,30,Republic of Vanuatu,Depressive disorders,2021,8686.892,10750.583,7131.8496,,VU
+Prevalence,422,Virgin Islands (U.S.),Depressive disorders,2021,3903.9946,4788.226,3161.0989,,VI
+Prevalence,213,Republic of the Niger,Depressive disorders,2021,668673.5,826231.44,542867.75,,NG
+Prevalence,298,American Samoa,Depressive disorders,2021,1420.1783,1724.5347,1179.0831,,AS
+Prevalence,105,Antigua and Barbuda,Depressive disorders,2021,3461.725,4263.911,2793.5818,,AG
+Prevalence,71,Australia,Depressive disorders,2021,1335679.8,1630653.8,1086649.0,,AU
+Prevalence,107,Barbados,Depressive disorders,2021,13184.96,16715.686,10382.741,,BB
+Prevalence,108,Belize,Depressive disorders,2021,15453.918,19229.395,12422.818,,BZ
+Prevalence,305,Bermuda,Depressive disorders,2021,2914.726,3608.0413,2308.801,,BM
+Prevalence,44,Bosnia and Herzegovina,Depressive disorders,2021,142703.72,174607.86,116758.56,,BA
+Prevalence,66,Brunei Darussalam,Depressive disorders,2021,9165.652,11275.813,7513.6143,,BN
+Prevalence,201,Burkina Faso,Depressive disorders,2021,738114.3,930138.4,603501.9,,BF
+Prevalence,101,Canada,Depressive disorders,2021,1615263.6,1980943.6,1315798.9,,CA
+Prevalence,169,Central African Republic,Depressive disorders,2021,287235.28,363771.84,223347.72,,CF
+Prevalence,126,Republic of Costa Rica,Depressive disorders,2021,202051.06,249386.86,161811.03,,CR
+Prevalence,109,Republic of Cuba,Depressive disorders,2021,618898.75,762955.6,499826.94,,CU
+Prevalence,128,Republic of Guatemala,Depressive disorders,2021,630395.0,813533.25,501508.2,,GT
+Prevalence,113,Republic of Guyana,Depressive disorders,2021,46214.33,58658.824,36377.47,,GY
+Prevalence,131,Republic of Nicaragua,Depressive disorders,2021,245235.55,303807.62,191518.11,,NI
+Prevalence,132,Republic of Panama,Depressive disorders,2021,153690.88,192191.28,122343.516,,PA
+Prevalence,123,Republic of Peru,Depressive disorders,2021,1004952.2,1226641.5,825676.0,,PE
+Prevalence,522,Republic of Sudan,Depressive disorders,2021,1935911.5,2482152.8,1504963.0,,SD
+Prevalence,93,Kingdom of Sweden,Depressive disorders,2021,581393.5,688003.1,496716.47,,SE
+Prevalence,189,United Republic of Tanzania,Depressive disorders,2021,2298479.0,2880326.8,1866414.1,,TZ
+Prevalence,119,Republic of Trinidad and Tobago,Depressive disorders,2021,74050.96,94514.74,58528.773,,TT
+Prevalence,139,People's Democratic Republic of Algeria,Depressive disorders,2021,2043955.9,2576583.0,1635214.9,,DZ
+Prevalence,135,Federative Republic of Brazil,Depressive disorders,2021,10667497,12124713,9463555.0,,BR
+Prevalence,125,Republic of Colombia,Depressive disorders,2021,1326251.5,1609027.9,1088956.6,,CO
+Prevalence,141,Arab Republic of Egypt,Depressive disorders,2021,4491163.0,5511911.0,3545567.5,,EG
+Prevalence,127,Republic of El Salvador,Depressive disorders,2021,256860.98,320943.56,206496.97,,SV
+Prevalence,172,Republic of Equatorial Guinea,Depressive disorders,2021,80217.99,104687.766,64026.77,,GQ
+Prevalence,129,Republic of Honduras,Depressive disorders,2021,351345.03,441835.4,273613.38,,HN
+Prevalence,144,Hashemite Kingdom of Jordan,Depressive disorders,2021,555445.44,707039.56,447867.34,,JO
+Prevalence,147,State of Libya,Depressive disorders,2021,381599.16,484944.16,306474.53,,LY
+Prevalence,181,Republic of Madagascar,Depressive disorders,2021,1169871.5,1450217.9,942548.56,,MG
+Prevalence,148,Kingdom of Morocco,Depressive disorders,2021,2326645.5,2890351.5,1867016.8,,MA
+Prevalence,164,Federal Democratic Republic of Nepal,Depressive disorders,2021,1769725.5,2187136.2,1403701.8,,NP
+Prevalence,150,Sultanate of Oman,Depressive disorders,2021,229420.03,291706.78,178049.11,,OM
+Prevalence,186,Republic of Seychelles,Depressive disorders,2021,3644.1804,4395.7915,2991.3398,,SC
+Prevalence,154,Republic of Tunisia,Depressive disorders,2021,860332.3,1074970.9,674521.6,,TN
+Prevalence,155,Republic of Turkey,Depressive disorders,2021,4275537.5,5422087.0,3389191.0,,TR
+Prevalence,160,Islamic Republic of Afghanistan,Depressive disorders,2021,1439500.0,1865842.6,1121777.0,,AF
+Prevalence,168,Republic of Angola,Depressive disorders,2021,1601651.5,2063236.0,1269517.1,,AO
+Prevalence,161,People's Republic of Bangladesh,Depressive disorders,2021,8825525.0,10921276,7036451.0,,BD
+Prevalence,162,Kingdom of Bhutan,Depressive disorders,2021,32389.686,39791.17,26395.258,,BT
+Prevalence,163,Republic of India,Depressive disorders,2021,62492652,70496440,56015612,,IN
+Prevalence,183,Republic of Mauritius,Depressive disorders,2021,67635.94,82341.53,55104.36,,MU
+Prevalence,184,Republic of Mozambique,Depressive disorders,2021,1248401.9,1576400.9,990971.25,,MZ
+Prevalence,165,Islamic Republic of Pakistan,Depressive disorders,2021,8897908.0,10460221,7584841.0,,PK
+Prevalence,152,Kingdom of Saudi Arabia,Depressive disorders,2021,1993938.8,2518009.2,1588811.5,,SA
+Prevalence,187,Federal Republic of Somalia,Depressive disorders,2021,827424.6,1041766.94,652041.06,,SO
+Prevalence,196,Republic of South Africa,Depressive disorders,2021,3078884.5,3522584.5,2727067.2,,ZA
+Prevalence,157,Republic of Yemen,Depressive disorders,2021,1450562.2,1875176.8,1157459.0,,YE
+Prevalence,191,Republic of Zambia,Depressive disorders,2021,707341.4,878335.1,573465.4,,ZM
+Prevalence,200,Republic of Benin,Depressive disorders,2021,456971.72,572156.75,368856.94,,BJ
+Prevalence,175,Republic of Burundi,Depressive disorders,2021,510984.25,636512.9,401402.7,,BI
+Prevalence,202,Republic of Cameroon,Depressive disorders,2021,1159143.0,1451721.4,931075.3,,CM
+Prevalence,177,Republic of Djibouti,Depressive disorders,2021,55796.227,69305.99,45304.004,,DJ
+Prevalence,178,State of Eritrea,Depressive disorders,2021,279508.6,343289.25,226471.72,,ER
+Prevalence,179,Federal Democratic Republic of Ethiopia,Depressive disorders,2021,4286656.0,4977453.0,3712084.5,,ET
+Prevalence,173,Gabonese Republic,Depressive disorders,2021,106925.39,134565.94,85383.52,,GA
+Prevalence,209,Republic of Guinea-Bissau,Depressive disorders,2021,72606.08,91118.93,58189.117,,GN
+Prevalence,208,Republic of Guinea,Depressive disorders,2021,462803.78,570009.0,378630.62,,GN
+Prevalence,180,Republic of Kenya,Depressive disorders,2021,2130735.8,2421471.0,1898726.4,,KE
+Prevalence,194,Kingdom of Lesotho,Depressive disorders,2021,124289.375,157994.73,99595.86,,LS
+Prevalence,182,Republic of Malawi,Depressive disorders,2021,690570.3,854632.06,551574.8,,MW
+Prevalence,195,Republic of Namibia,Depressive disorders,2021,103121.164,127918.93,82984.55,,NA
+Prevalence,214,Federal Republic of Nigeria,Depressive disorders,2021,6457991.5,7365493.0,5772062.0,,NE
+Prevalence,185,Republic of Rwanda,Depressive disorders,2021,616988.4,759114.94,489556.0,,RW
+Prevalence,190,Republic of Uganda,Depressive disorders,2021,2282259.5,2867107.2,1814596.5,,UG
+Prevalence,193,Republic of Botswana,Depressive disorders,2021,121311.05,153589.36,96681.93,,BW
+Prevalence,203,Republic of Cabo Verde,Depressive disorders,2021,32720.375,40673.66,26136.434,,CV
+Prevalence,204,Republic of Chad,Depressive disorders,2021,602403.2,765165.8,467897.75,,TD
+Prevalence,197,Kingdom of Eswatini,Depressive disorders,2021,60474.723,77368.125,47286.848,,SZ
+Prevalence,207,Republic of Ghana,Depressive disorders,2021,1347070.9,1670927.5,1068753.8,,GH
+Prevalence,210,Republic of Liberia,Depressive disorders,2021,204564.08,255501.34,163820.7,,LR
+Prevalence,211,Republic of Mali,Depressive disorders,2021,617956.4,758966.4,498644.44,,ML
+Prevalence,212,Islamic Republic of Mauritania,Depressive disorders,2021,134221.69,161745.55,108972.37,,MR
+Prevalence,367,Principality of Monaco,Depressive disorders,2021,2191.3943,2702.0037,1721.117,,MC
+Prevalence,369,Republic of Nauru,Depressive disorders,2021,327.58127,413.76318,258.69376,,NR
+Prevalence,374,Republic of Niue,Depressive disorders,2021,62.134777,76.612915,51.037094,,NU
+Prevalence,380,Republic of Palau,Depressive disorders,2021,722.0284,901.1277,590.13336,,PW
+Prevalence,396,Republic of San Marino,Depressive disorders,2021,1945.7762,2462.4114,1494.943,,SM
+Prevalence,215,Democratic Republic of Sao Tome and Principe,Depressive disorders,2021,7371.3047,9081.306,6061.113,,ST
+Prevalence,216,Republic of Senegal,Depressive disorders,2021,565371.7,697707.44,460772.38,,SN
+Prevalence,217,Republic of Sierra Leone,Depressive disorders,2021,307499.4,387378.84,246585.42,,SL
+Prevalence,435,Republic of South Sudan,Depressive disorders,2021,359972.3,456977.2,288232.53,,SS
+Prevalence,218,Togolese Republic,Depressive disorders,2021,314859.22,392059.88,252313.53,,TG
+Prevalence,198,Republic of Zimbabwe,Depressive disorders,2021,469517.0,574362.0,381746.16,,ZW
