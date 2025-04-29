@@ -89,47 +89,47 @@ CREATE TABLE IF NOT EXISTS staging.country_top_artists (
     fetch_date DATE DEFAULT CURRENT_DATE
 );
 
--- staging.genre
-CREATE TABLE IF NOT EXISTS staging.genre (
-    genre_id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    subgenre VARCHAR(100),
-    origin_country VARCHAR(100),
-    origin_year INTEGER
-);
+CREATE TABLE IF NOT EXIST staging.all_countries_religion (
+    acr_id SERIAL PRIMARY KEY
+    iso2 varchar(2) INTEGER REFERENCES staging.country(iso2)
+    region varchar(50)
+    nation varchar(50)
+    bahai numeric
+    bahai_percent numeric
+    buddhists numeric
+    buddhists_percent numeric
+    chinese_folk numeric
+    chinese_folk_percent numeric
+    christians numeric
+    christians_percent numeric
+    confucianist numeric
+    confucianist_percent numeric
+    daoist numeric
+    daoist_percent numeric
+    ethnic_religionist numeric
+    ethnic_religionist_percent numeric
+    hindus numeric
+    hindus_percent numeric
+    jews numeric
+    jews_percent numeric
+    muslims numeric
+    muslims_percent numeric
+    non_religious numeric
+    non_religious_percent numeric
+    sikhs numeric
+    sikhs_percent numeric
+)
 
--- staging.album
-CREATE TABLE IF NOT EXISTS staging.album (
-    album_id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    artist_id INTEGER REFERENCES staging.artist(artist_id),
-    release_year INTEGER,
-    label VARCHAR(100),
-    popularity_index NUMERIC(5,2),
-    re_release_count INTEGER
-);
-
--- staging.song
-CREATE TABLE IF NOT EXISTS staging.song (
-    song_id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    artist_id INTEGER REFERENCES staging.artist(artist_id),
-    genre_id INTEGER REFERENCES staging.genre(genre_id),
-    album_id INTEGER REFERENCES staging.album(album_id),
-    country_id INTEGER REFERENCES staging.country(country_id),
-    year INTEGER,
-    lyrics TEXT,
-    bpm INTEGER,
-    duration_sec INTEGER,
-    explicit BOOLEAN,
-    popularity_index NUMERIC(5,2),
-    sentiment_score NUMERIC(5,2),
-    philosophy_score NUMERIC(5,2),
-    meme_potential NUMERIC(5,2),
-    depression_score NUMERIC(5,2),
-    sex_potential NUMERIC(5,2),
-    protest_index NUMERIC(5,2),
-    alcohol_mentions_count INTEGER,
-    drug_mentions_count INTEGER,
-    dominant_listener_gender VARCHAR(50)
-);
+--не то чтобы она нужна, но на всякий
+CREATE TABLE IF NOT EXIST staging.ihme_gbd (
+    measure_name varchar(50)
+    location_id numeric
+    location_name varchar(50)
+    cause_name varchar(50)
+    "year" numeric
+    val numeric
+    upper numeric
+    lower numeric
+    iso3 varchar
+    iso2 varchar
+)

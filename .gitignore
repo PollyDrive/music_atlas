@@ -37,7 +37,9 @@ Thumbs.db
 
 # backups
 backup.sql
-data/
+data/backups/
+data/cleansed/
+data/mart/
 
 # violations
 violations/
