@@ -1,4 +1,4 @@
--- -- init.sql
+-- -- init.sql старт и для staging и для cleansed
 
 \echo '==> Resetting database...'
 \i '/docker-entrypoint-initdb.d/utils/dev_reset.sql'
@@ -7,7 +7,7 @@
 \i '/docker-entrypoint-initdb.d/migrations/staging/v001__create_staging.sql'
 
 \echo '==> Creating indices...'
-\i '/docker-entrypoint-initdb.d/utils/v001__indices.sql'
+\i '/docker-entrypoint-initdb.d/utils/v001__indices.sql' --по идее, они не нужны, но ради примера пусть останутся
 
 -----------------
 
@@ -18,7 +18,19 @@
 \i '/docker-entrypoint-initdb.d/migrations/staging/v003__create_indices.sql'
 \i '/docker-entrypoint-initdb.d/migrations/staging/v004__create_enrich.sql'
 
--- \i '/docker-entrypoint-initdb.d/migrations/v004__cleansed_tag_info.sql'
--- \i '/docker-entrypoint-initdb.d/migrations/v006__add_to_countries.sql'
+---- cleansed ---- 
 
+\echo '==> Creating cleansed schema and tables...'
+\i '/docker-entrypoint-initdb.d/migrations/cleansed/v001__create_cleansed_schemas.sql'
+\i '/docker-entrypoint-initdb.d/migrations/cleansed/v001__create_cleansed_country.sql'
+
+
+--план такой:
+-- 1. Запустить скрипт создания всех необходимых для стейджинга схем
+-- 2. Очистить таблицы от говна
+-- 3. Проверить созданные схемы
+-- 4. Дописать недостающие
+-- 5. Проверить индексы, ключи
+-- 6. Накатить бэкап
+--~~Сделать: country_language~~
 

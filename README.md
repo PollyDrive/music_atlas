@@ -29,9 +29,10 @@ psycopg2,
 Alembic 
 
 
-## Запуск проекта c 0
+## Запуск проекта c 0 для staging
     docs/init.md
 ## Инициализация cо слоя Cleansed
+    docs/get_cleansed.md
 
 Что я хотела:
 - Сравнение количества концертов k-pop и уровня самоубийств.

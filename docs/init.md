@@ -20,13 +20,4 @@
     `./data/all_countries_religion.csv`
     `./data/ihme_gbd.csv`
 
-### Старт с cleansed
 
-<!-- `python3 -m etl.cleansed.cleansed_country_decomp.py` 
-разбивает country по тематикам
-
-`python3 -m etl.cleansed.build_artist_tag_lastfm`
-Сопоставляю исполнителя с жанрами, делю строку тегов на отдельные жанры
-
-`python3 -m etl.cleansed.load_tag_info_lastfm.py`
-Загружаю подробную инфу про жанры --> -->

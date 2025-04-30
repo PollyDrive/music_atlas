@@ -3,6 +3,7 @@ from etl.loaders import load_country
 from etl.loaders import load_lastfm_top_artists
 from etl.loaders import load_artist_info
 from etl.loaders import load_artist_tags_from_lastfm
+from etl.cleansed import load_tag_info_lastfm
 from etl.loaders import load_artist_musicbrainz
 from etl.loaders import patch_artist_mbid
 from etl.enrich import load_alcohol_consumption
@@ -22,6 +23,8 @@ def main():
         logging.info("Country load finished successfully.")
     except Exception as e:
         logging.error(f"Country loader failed: {e}")
+
+    # ----------------м-у-з-л-о-------------------- #
 
     # По всем странам берем топ-50 из Last.fm
     try:
@@ -43,7 +46,7 @@ def main():
         logging.info("Artist genres load finished successfully.")
     except Exception as e:
         logging.error(f"Artist genres loader failed: {e}")
-
+    
     # Обогащение исполнителей из musicbrainz (artist_musicbrainz)
     try:
         load_artist_musicbrainz.main()
@@ -57,7 +60,8 @@ def main():
         logging.info("Artist patch finished successfully.")
     except Exception as e:
         logging.error(f"Artist patch failed: {e}")
-    
+
+    # ----------------м-у-з-л-о-------------------- #
 
     # Обогащение статистикой алкоголя на душу, депрессивных заболеваний,
     # свободы прессы, уровня суицида и основных языков, все в country

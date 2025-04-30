@@ -2,7 +2,9 @@ import logging
 from sqlalchemy import text
 from utils.db import get_engine
 
-# Настройка логирования
+
+# Но проверять ее я уже не буду, тяни с бэкапа
+
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
 def generate_top_religions_query(nation_column: str, religion_cols: list, source_table: str, target_table: str) -> str:
@@ -94,8 +96,6 @@ def execute_query_sqlalchemy(engine, query: str):
     except Exception as e:
         logging.error(f"Ошибка при выполнении SQL запроса: {e}")
 
-# --- Пример использования ---
-
 if __name__ == "__main__":
     # Список религий
     religion_columns = ['bahai', 'buddhists', 'chinese_folk', 'christians', 'confucianist', 'daoist', 'ethnic_religionist', 'hindus', 'jews', 'muslims', 'non_religious', 'sikhs']
@@ -103,11 +103,9 @@ if __name__ == "__main__":
     source_table_name = "staging.all_countries_religion"
     target_table_name = "cleansed.nation_top_religions"
 
-    # Получаем подключение к БД через твой utils/db.py
     engine = get_engine()
-    # Генерируем SQL-запрос
+    
     query = generate_top_religions_query(nation_col, religion_columns, source_table_name, target_table_name)
 
-    # Выполняем SQL-запрос
     if query:
         execute_query_sqlalchemy(engine, query)
