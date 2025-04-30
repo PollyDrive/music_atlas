@@ -1,4 +1,5 @@
-Music Atlas is a platform for wacky correlations that shows various weird connections between the popularity of artists or genres and various country metrics.
+## Music Atlas
+is a platform for wacky correlations that shows various weird connections between the popularity of artists or genres and various country metrics.
 For example:
 - Comparing the number of k-pop concerts and the suicide rate.
 - What exactly does a "sex playlist" mean in different countries?
@@ -12,26 +13,18 @@ In the future, we plan to:
 - Correlations and statistics on graphs by year.
 
 
-Music Atlas — это платформа для дурацких корреляций, которая показывает странные связи между различными показателями страны и популярными в ней исполнителями.
+## Music Atlas
+это платформа для дурацких корреляций, которая показывает странные связи между различными показателями страны и популярными в ней исполнителями.
 
-В будущем планируется:
+### В будущем планируется:
 - сбор данных о песнях (метаданные + тексты) из различных открытых баз данных музыки.
 - исследование связей (песня ↔ автор ↔ жанр ↔ страна ↔ год).
 - корреляции и статистика на графиках по годам.
 
-## Стек
-PostgreSQL, 
-Docker, 
-Python ≥ 3.10, 
-pandas, 
-SQLAlchemy, 
-psycopg2, 
-Alembic 
-
-
-## Запуск проекта c 0 для staging
+### Запуск проекта c 0 для staging
     docs/init.md
-## Инициализация cо слоя Cleansed
+
+### Инициализация cо слоя Cleansed
     docs/get_cleansed.md
 
 Что я хотела:
