@@ -71,11 +71,12 @@ CREATE TABLE IF NOT EXISTS staging.artist (
     scandal_index NUMERIC(5,2),
     fan_subculture VARCHAR(100),
     bio_summary TEXT,
-    listeners BIGINT,
-    playcount BIGINT,
+    listeners NUMERIC,
+    playcount NUMERIC,
     tags TEXT,
     url TEXT
 );
+
 
 -- staging.country_top_artists
 CREATE TABLE IF NOT EXISTS staging.country_top_artists (

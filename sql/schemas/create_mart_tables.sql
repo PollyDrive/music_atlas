@@ -118,10 +118,6 @@ SELECT
 FROM artist_genres
 ORDER BY country_name DESC, rank ASC;
 
- 
-
-
-
 --------------------------------------------------------------------------------
 -- 1. Получаем Топ-5 стран по параметру 1
 WITH top_first AS (
@@ -189,6 +185,5 @@ SELECT
   tag
 FROM artist_genres
 ORDER BY country_name DESC, rank ASC;
-
 
 insert into mart.emp_services_homicide_top
