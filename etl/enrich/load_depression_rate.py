@@ -30,7 +30,7 @@ def main():
             with engine.begin() as conn:
                 result = conn.execute(text("""
                     UPDATE staging.country
-                    SET depression_rate_2021 = :val
+                    SET depression_value_2021 = :val
                     WHERE iso2 = :iso
                 """), {"val": val, "iso": iso})
                 if result.rowcount > 0:
