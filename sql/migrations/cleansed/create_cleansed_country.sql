@@ -113,7 +113,6 @@ SELECT
     languages,
     press_freedom_2024,
     suicide_rate_2021,
-    depression_rate_2021,
     depression_value_2021,
     alcohol_per_capita_2019,
     FOREIGN KEY (iso2) REFERENCES cleansed.country(iso2);
@@ -155,3 +154,15 @@ CREATE INDEX idx_education_iso2 ON cleansed.education (iso2);
 CREATE INDEX idx_employment_iso2 ON cleansed.employment (iso2);
 CREATE INDEX idx_others_iso2 ON cleansed.others (iso2);
 CREATE INDEX idx_social_iso2 ON cleansed.social (iso2);
+
+
+---- возможно, не лучшее время и место для этой манипулиции, но
+ALTER TABLE cleansed.social
+add column depression_rate_2021 numeric;
+
+UPDATE cleansed.social s
+set depression_rate_2021 = round(s.depression_value_2021 / NULLIF(population * 1000, 0), 3)
+FROM staging.country c
+WHERE s.iso2 = c.iso2
+  AND c.depression_value_2021 IS NOT NULL
+  AND c.population IS NOT NULL;
