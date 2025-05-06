@@ -10,7 +10,8 @@ from etl.mart.analyze_with_religion import analyze_religion_vs_indicator
 # analyze_quadrant_artist_tag('life_value', 'life_expectancy_male', 'social', 'alcohol_per_capita_2019', 5)
 
 # analyze_single_indicator('social', 'press_freedom_2024', 5)
-# analyze_single_indicator('life_value', 'infant_mortality', 5)
+# analyze_single_indicator('life_value', 'infant_mortality', 50)
+# analyze_single_indicator('social', 'suicide_rate_2021', 50)
 
 # --todo--
 # объединить две ф в одну
@@ -21,4 +22,9 @@ from etl.mart.analyze_with_religion import analyze_religion_vs_indicator
 
 
 # analyze_religion_vs_indicator('employment', 'unemployment', 'first', 10, False)
-analyze_religion_vs_indicator('population', 'sex_ratio', 'first', 10, False)
+# analyze_religion_vs_indicator('population', 'sex_ratio', 'first', 50, True)
+# analyze_religion_vs_indicator('social', 'suicide_rate_2021', 'first', 50, True)
+# analyze_religion_vs_indicator('social', 'press_freedom_2024', 'first', 50, True)
+# analyze_religion_vs_indicator('life_value', 'fertility', 'first', 50, True)
+# analyze_religion_vs_indicator('life_value', 'life_expectancy_male', 'first', 50, False)
+analyze_religion_vs_indicator('others', 'homicide_rate', 'first', 50, True)

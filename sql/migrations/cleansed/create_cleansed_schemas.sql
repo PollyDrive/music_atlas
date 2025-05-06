@@ -81,6 +81,10 @@ ALTER TABLE cleansed.top_10_artist
 ADD CONSTRAINT fk_top_10_artist_name
 FOREIGN KEY (artist_name) REFERENCES cleansed.artist(name);
 
+ALTER TABLE cleansed.top_50_artist
+ADD CONSTRAINT fk_top_50_artist_name
+FOREIGN KEY (artist_name) REFERENCES cleansed.artist(name);
+
 ALTER TABLE cleansed.artist_tag
 ADD CONSTRAINT fk_art_tag_name_art_name
 FOREIGN KEY (name) REFERENCES cleansed.artist(name);

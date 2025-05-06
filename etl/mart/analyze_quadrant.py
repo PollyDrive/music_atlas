@@ -149,7 +149,7 @@ def analyze_single_indicator(table, column, top_n=10, include_tags=True):
     print(f"Loading top {top_n} artists...")
     df_artists = pd.read_sql_query(f"""
         SELECT iso2, artist_name, rank
-        FROM cleansed.top_10_artist
+        FROM cleansed.top_50_artist
         WHERE rank <= {top_n}
     """, engine)
     df_artists = optimize_df_memory(df_artists)
@@ -195,7 +195,7 @@ def analyze_single_indicator(table, column, top_n=10, include_tags=True):
         df_country_artist['tag'] = df_country_artist['tag'].astype('category')
 
     # Only include tag in group_cols if include_tags is True
-    group_cols = ['median', 'name', column, 'artist_name']
+    group_cols = ['median', 'name', column, 'artist_name', 'rank']
     if include_tags:
         group_cols.append('tag')
 
