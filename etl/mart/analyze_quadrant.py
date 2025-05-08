@@ -49,8 +49,13 @@ def analyze_quadrant_artist_tag(table1, col1, table2, col2, top_n, include_tags=
     
     df['A_level'] = pd.cut(df[col1], bins=[-float('inf'), col1_median, float('inf')], labels=['low', 'high'])
     df['B_level'] = pd.cut(df[col2], bins=[-float('inf'), col2_median, float('inf')], labels=['low', 'high'])
-    df['quadrant'] = df['A_level'].astype('category') + '_' + df['B_level'].astype('category')
-    
+    df['quadrant'] = (
+        df['A_level']
+        .astype(str)
+        + '_'
+        + df['B_level'].astype(str)
+    ).astype('category')
+
     # Clean up memory
     del df1_clean, df2_clean
     gc.collect()
@@ -77,6 +82,7 @@ def analyze_quadrant_artist_tag(table1, col1, table2, col2, top_n, include_tags=
         df_country_artist['artist_name_clean'] = df_country_artist['artist_name_clean'].astype('category')
         df_tag['name_clean'] = df_tag['name_clean'].astype('category')
         
+        
         # Only keep necessary columns for the merge
         df_country_artist = df_country_artist.merge(
             df_tag[['name_clean', 'tag']],
@@ -98,7 +104,7 @@ def analyze_quadrant_artist_tag(table1, col1, table2, col2, top_n, include_tags=
         if col in df_country_artist.columns and df_country_artist[col].dtype == 'object':
             df_country_artist[col] = df_country_artist[col].astype('category')
     
-    group_cols = ['quadrant', 'name', col1, col2, 'artist_name', 'tag']
+    group_cols = ['quadrant', 'name', col1, col2, 'artist_name', 'tag', 'rank']
     df_result = (
         df_country_artist
         .groupby(group_cols, observed=True)  # Add observed=True parameter
