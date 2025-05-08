@@ -4,7 +4,14 @@ CREATE TABLE IF NOT EXISTS cleansed.top_10_artist(
     iso2 char(2) REFERENCES cleansed.country(iso2),
     rank numeric,
     artist_name char(50),
-    PRIMARY KEY (country_iso2, rank)
+    PRIMARY KEY (iso2, rank)
+)
+
+CREATE TABLE IF NOT EXISTS cleansed.top_50_artist(
+    iso2 char(2) REFERENCES cleansed.country(iso2),
+    rank numeric,
+    artist_name char(50),
+    PRIMARY KEY (iso2, rank)
 )
 
 CREATE TABLE IF NOT EXISTS cleansed.artist(
@@ -43,12 +50,18 @@ WHERE a.rank = dup.rank
 
 insert into cleansed.top_10_artist 
 SELECT
-    cta_id,
     country_iso2,
     rank,
     artist_name
 FROM staging.country_top_artists
 WHERE rank <=10
+
+insert into cleansed.top_50_artist 
+SELECT
+    country_iso2,
+    rank,
+    artist_name
+FROM staging.country_top_artists
 
 ----------------------------------------------
 
@@ -58,10 +71,18 @@ FOREIGN KEY (name) REFERENCES cleansed.top_10_artist(artist_name);
 
 ALTER TABLE cleansed.top_10_artist
 ADD CONSTRAINT fk_top_10_artist_country
-FOREIGN KEY (iso2) REFERENCES cleansed.country(country_iso2);
+FOREIGN KEY (iso2) REFERENCES cleansed.country(iso2);
+
+ALTER TABLE cleansed.top_50_artist
+ADD CONSTRAINT fk_top_50_artist_country
+FOREIGN KEY (iso2) REFERENCES cleansed.country(iso2);
 
 ALTER TABLE cleansed.top_10_artist
 ADD CONSTRAINT fk_top_10_artist_name
+FOREIGN KEY (artist_name) REFERENCES cleansed.artist(name);
+
+ALTER TABLE cleansed.top_50_artist
+ADD CONSTRAINT fk_top_50_artist_name
 FOREIGN KEY (artist_name) REFERENCES cleansed.artist(name);
 
 ALTER TABLE cleansed.artist_tag
