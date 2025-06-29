@@ -42,3 +42,8 @@ data/cleansed/old
 
 # violations
 violations/
+
+mart_dump.sql
+metabase.db.mv.db
+metabase.db.trace.db
+metabase_backup.sql

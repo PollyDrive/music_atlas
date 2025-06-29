@@ -1,16 +1,26 @@
-## Music Atlas
-is a platform for wacky correlations that shows various weird connections between the popularity of artists or genres and various country metrics.
-For example:
-- Comparing the number of k-pop concerts and the suicide rate.
-- What exactly does a "sex playlist" mean in different countries?
-- Comparing the birth rate and the popularity of new metal bands in the early 2000s.
-- The influence of the economic system on the popularity of the chanson genre.
-- The relationship between the divorce rate and the popularity of breakup songs
+Внутренняя аналитическая платформа для исследования связи музыкальных трендов c социально-экономическими показателями стран.
+Полноценный end-to-end пайплайн от многоисточникового сбора и очистки данных до самослужебной аналитики.
 
-In the future, we plan to:
-- Collect song data (metadata + lyrics) from various open music databases.
-- Research connections (song ↔ author ↔ genre ↔ country ↔ year).
-- Correlations and statistics on graphs by year.
+## Архитектура Lakehouse (Medallion). 
+Данные проходят три независимых слоя — staging (raw), cleansed (нормализация, дедупликация), mart (звёздная схема под BI). Такой подход уменьшает связанность кода, упрощает governance и ускоряет аналитические запросы.
+
+## Пайплайн загрузки данных.
+
+Python-ETL на pandas/SQLAlchemy c idempotent-записями (ON CONFLICT DO NOTHING) и ретраями для API.
+Коннекторы к LastFM, MusicBrainz, World Bank, OurWorldInData и др. формируют ~1 ГБ сырого слоя при полном прогоне.
+
+## Версионирование БД
+Alembic + SQL-миграции; каждая ревизия имеет downgrade-скрипт для безопасного отката.
+
+## Контейнеризация и reproducibility.
+Всё приложение (PostgreSQL 15 + Metabase) разворачивается одной командой docker-compose up; переменные окружения вынесены в шаблон .env.
+
+## Качество данных.
+Пре-процессоры исправляют невалидные значения (напр. [unknown] в именах артистов) и автоматически создают индексы для «тяжёлых» колонок
+Централизованный кастом-логер + tqdm-прогресс позволяют отслеживать состояние каждой задачи ETL.
+
+## Аналитическая витрина и BI. 
+Star-schema формируется скриптом build_mart.py; Metabase подключён к слою mart, где готовые запросы и графики доступны бизнес-пользователям без участия инженеров.
 
 
 ## Music Atlas
@@ -26,14 +36,13 @@ In the future, we plan to:
 
 ### Инициализация cо слоя Cleansed
     docs/get_cleansed.md
-
+    
 Что я хотела:
 - Сравнение количества концертов k-pop и уровня самоубийств.
-- Что именно означает «секс-плейлист» в разных странах?
 - Сравнение уровня рождаемости и популярности новых метал-групп в начале нулевых.
 - Влияние экономической системы на популярность жанра «шансон».
 - Связь между количеством разводов и популярностью песен о расставаниях
 
 Что я получила:
 - В странах, с высоким показателем A и B, чаще слушают исполнителей X, Y, Z
-- Чем выше/ниже показатель С в стране, тем реже/чаще в топе исполнители X, Y, Z
+- Чем выше/ниже показатель С в стране, тем реже/чаще в топе исполнители X, Y, Zg a
